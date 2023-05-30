@@ -5,8 +5,8 @@
 ### 上手
 
 - API 程序 `package` 之后，将 `jar` 包复制到 `api` 目录下，并重新命名为 `app.jar`
-- PC 界面程序 build 之后，将 `dist` 目录复制到本项目的根目录，然后重命名为 `frontend`
-- 后台界面程序 build 之后，将 `dist` 目录复制到本项目的根目录，然后重命名为 `backend`
+- PC 界面程序 build 之后（`VITE_APP_URL=/api/` 应该这样设置），将 `dist` 目录复制到本项目的根目录，然后重命名为 `frontend`
+- 后台界面程序 build 之后（`VITE_APP_URL=/api/` 应该这样设置），将 `dist` 目录复制到本项目的根目录，然后重命名为 `backend`
 
 之后，在本项目目录命令执行：
 
