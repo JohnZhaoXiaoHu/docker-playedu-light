@@ -17,7 +17,7 @@ docker build -t playedu-light .
 执行完毕之后，可运行下面命令将 PlayEdu 服务跑起来：
 
 ```
-docker run -d -p 9898:80 --name playedu-local \
+docker run -d -p 9800:9800 -p 9900:9900 --name playedu-local \
   -e DB_HOST=数据库host \
   -e DB_PORT=数据库端口 \
   -e DB_NAME=数据库名 \
@@ -36,8 +36,7 @@ docker run -d -p 9898:80 --name playedu-local \
 
 跑起来之后，可以通过下面的链接访问前后台：
 
-| 端口     | 地址                          |
-| -------- | ----------------------------- |
-| 学员界面 | `http://localhost:9898`       |
-| 后台管理 | `http://localhost:9898/admin` |
-| API 服务 | `http://localhost:9898/api`   |
+| 端口     | 地址                    |
+| -------- | ----------------------- |
+| 学员界面 | `http://localhost:9800` |
+| 后台管理 | `http://localhost:9900` |
