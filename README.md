@@ -7,7 +7,7 @@
 在命令行中执行：
 
 ```
-docker run -d -p 9800:9800 -p 9900:9900 --name playedu-local \
+docker run -d -p 9800:9800 -p 9900:9900 --name playedu-light \
   -e DB_HOST=数据库host \
   -e DB_PORT=数据库端口 \
   -e DB_NAME=数据库名 \
@@ -21,7 +21,7 @@ docker run -d -p 9800:9800 -p 9900:9900 --name playedu-local \
   -e MINIO_END_POINT=minio的服务地址 \
   -e MINIO_BUCKET=minio的bucket \
   -e MINIO_DOMAIN=minio的访问域名 \
-  registry.cn-hangzhou.aliyuncs.com/xiaoteng/playedu-light:1.0-beta.5
+  registry.cn-hangzhou.aliyuncs.com/playedu/light:1.0-beta.6
 ```
 
 跑起来之后，可以通过下面的链接访问前后台：
