@@ -16,11 +16,6 @@ docker run -d -p 9800:9800 -p 9900:9900 --name playedu-light \
   -e REDIS_HOST=Redis的host \
   -e REDIS_PORT=Redis的端口 \
   -e REDIS_PASS=redis的密码 \
-  -e MINIO_USER=minio的accessKey \
-  -e MINIO_PASS=minio的secretKey \
-  -e MINIO_END_POINT=minio的服务地址 \
-  -e MINIO_BUCKET=minio的bucket \
-  -e MINIO_DOMAIN=minio的访问域名 \
   registry.cn-hangzhou.aliyuncs.com/playedu/light:1.0-beta.6
 ```
 
