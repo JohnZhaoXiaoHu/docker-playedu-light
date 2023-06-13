@@ -51,6 +51,7 @@ docker run -d -p 9800:9800 -p 9900:9900 --name playedu-local \
   -e REDIS_HOST=Redis的host \
   -e REDIS_PORT=Redis的端口 \
   -e REDIS_PASS=redis的密码 \
+  -e SA_TOKEN_JWT_SECRET_KEY=随机英文+数字的字符串 \
   playedu-light
 ```
 
