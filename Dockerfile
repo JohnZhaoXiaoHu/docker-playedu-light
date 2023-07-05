@@ -14,6 +14,7 @@ RUN mkdir /app
 # Copy代码
 COPY frontend /app/frontend
 COPY backend /app/backend
+COPY h5 /app/h5
 COPY api /app/api
 COPY conf/nginx.conf /etc/nginx/http.d/default.conf
 
