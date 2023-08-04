@@ -17,7 +17,7 @@ docker run -d -p 9700:80 -p 9800:9800 -p 9801:9801 -p 9900:9900 --name playedu-l
   -e REDIS_PORT=Redis的端口 \
   -e REDIS_PASS=redis的密码 \
   -e SA_TOKEN_JWT_SECRET_KEY=随机英文+数字的字符串 \
-  registry.cn-hangzhou.aliyuncs.com/playedu/light:1.2
+  registry.cn-hangzhou.aliyuncs.com/playedu/light:1.2.1
 ```
 
 跑起来之后，可以通过下面的链接访问前后台：
