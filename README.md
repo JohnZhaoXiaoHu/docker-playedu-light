@@ -1,13 +1,12 @@
 ## PlayEdu Light Docker 构建方案
 
-本套方案将 API + PC 前台 + H5 前台 + 后台管理 四个整合在一个镜像当中，适用于轻量级客户。支持下面：
-
-- [x] adm64
-- [x] arm64
+本套方案将 API + PC 前台 + H5 前台 + 后台管理 四个整合在一个镜像当中，适用于轻量级客户。
 
 ### 使用官方镜像
 
 在命令行中执行：
+
+> 本项目提供 `linux/amd64` 的 platform 运行。如果您是 `linux/arm64` 的话请将 `playedu/light` 修改为 `playedu/light-arm64` 。
 
 ```
 docker run -d -p 9700:80 -p 9800:9800 -p 9801:9801 -p 9900:9900 --name playedu-light \
@@ -20,7 +19,7 @@ docker run -d -p 9700:80 -p 9800:9800 -p 9801:9801 -p 9900:9900 --name playedu-l
   -e REDIS_PORT=Redis的端口 \
   -e REDIS_PASS=redis的密码 \
   -e SA_TOKEN_JWT_SECRET_KEY=随机英文+数字的字符串 \
-  registry.cn-hangzhou.aliyuncs.com/playedu/light:1.2.1
+  registry.cn-hangzhou.aliyuncs.com/playedu/light:1.2.2
 ```
 
 跑起来之后，可以通过下面的链接访问前后台：
@@ -41,8 +40,10 @@ docker run -d -p 9700:80 -p 9800:9800 -p 9801:9801 -p 9900:9900 --name playedu-l
 之后，在本项目目录命令执行：
 
 ```
-docker build -t playedu-light .
+docker build --platform linux/amd64 -t playedu-light .
 ```
+
+> 如果是编译 arm 平台运行镜像的话，请将上述命令的 `linux/amd64` 更换为 `linux/arm64` 。
 
 执行完毕之后，可运行下面命令将 PlayEdu 服务跑起来：
 
