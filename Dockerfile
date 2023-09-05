@@ -12,7 +12,7 @@ RUN git clone -b dev https://github.com/PlayEdu/PlayEdu.git playedu
 # 编译jar包
 WORKDIR /app/playedu
 
-RUN /app/mvnw -Dmaven.test.skip=true clean package
+RUN /app/playedu/mvnw -Dmaven.test.skip=true clean package
 
 FROM node:20-alpine as NodeBuilder
 
